@@ -1,30 +1,20 @@
 // MAPS needed for our diverse backgrounds - tile layers:
 
-// // OUTDOORS TYPE MAP
-// var outdoors = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}",{
-//   accessToken: API_KEY
-// });
+// OUTDOORS TYPE MAP
+var outdoors = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}",{
+  accessToken: API_KEY
+});
 
-// // GRAYMAP TYPE
-// var graymap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}",{
-//   accessToken: API_KEY
-// });
+// GRAYMAP TYPE
+var graymap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}",{
+  accessToken: API_KEY
+});
 
-// //  SATELLITE TYPE MAP
-// var satellitemap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}",{
-//   accessToken: API_KEY
-// });
-// grayscale background.
-var graymap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?" +
-  "access_token=pk.eyJ1IjoiaWRvbWFpY2EiLCJhIjoiY2twMzJmaDh6MDFxbjJ2cXQyb2QyMzhwaiJ9.-FzfqNuduzuROgy0Sa423g");
+//  SATELLITE TYPE MAP
+var satellitemap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}",{
+  accessToken: API_KEY
+});
 
-// satellite background.
-var satellitemap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?" +
-  "access_token=pk.eyJ1IjoiaWRvbWFpY2EiLCJhIjoiY2twMzJmaDh6MDFxbjJ2cXQyb2QyMzhwaiJ9.-FzfqNuduzuROgy0Sa423g");
-
-// outdoors background.
-var outdoors = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{z}/{x}/{y}?" +
-  "access_token=pk.eyJ1IjoiaWRvbWFpY2EiLCJhIjoiY2twMzJmaDh6MDFxbjJ2cXQyb2QyMzhwaiJ9.-FzfqNuduzuROgy0Sa423g");
 
 
 // Define a map object with center, zoom and layers
@@ -133,7 +123,7 @@ L.control
 legend.onAdd = function() {
   var div = L.DomUtil.create("div", "info legend");
   //title of labels box, bold and give one additional row space
-  labels = ['<strong>Depth in Km.</strong><br>'];
+  labels = ['<strong>EARTHQUAKE DEPTH in KM.</strong><br>'];
 
   var depths = ['Elevation (depth < 0) ', 10, 20, 100, 250, 500];
   var colors = [
